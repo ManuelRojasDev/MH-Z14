@@ -1,12 +1,9 @@
 #include <MHZ14.h>
 
 
-MHZ14::MHZ14(uint8_t pin_,uint8_t model_ = 5000, unsigned long timeout_ = 2100, uint8_t unit_ = 0){
+MHZ14::MHZ14(uint8_t pin_){
 	pin = pin_; // save pin to read from
 	pinMode(pin, INPUT); // set pin mode to input
-	timeout = timeout_;	// set timeout default is 2000 
-	unit = unit_; // output unit
-	model = model_;// model some are 2000, 5000, 10000 PPM
 	}
 
 long MHZ14::read(){
